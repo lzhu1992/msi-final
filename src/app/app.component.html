@@ -1,0 +1,364 @@
+<div class="site-wrapper wrapall">
+
+  <app-header></app-header>
+
+  <router-outlet></router-outlet>
+
+  <app-footer></app-footer>
+
+<!--</div>&lt;!&ndash; end wrapall / boxed &ndash;&gt;-->
+
+<!--<div id="back-to-top" style="display: none;"><a href="https://www.1stconstitution.com/#"><i-->
+  <!--class="fa fa-chevron-up"></i></a></div>-->
+
+<!--<script id="wpsl-info-window-template" type="text/template">-->
+  <!--<div data-store-id="<%= id %>" class="wpsl-info-window">-->
+    <!--<p>-->
+      <!--<% if ( wpslSettings.storeUrl == 1 && url ) { %>-->
+      <!--<strong><a href="<%= url %>"><%= store %></a></strong>-->
+      <!--<% } else { %>-->
+      <!--<strong><%= store %></strong>-->
+      <!--<% } %>-->
+      <!--<span><%= address %></span>-->
+      <!--<% if ( address2 ) { %>-->
+      <!--<span><%= address2 %></span>-->
+      <!--<% } %>-->
+      <!--<span><%= city %> <%= state %> <%= zip %></span>-->
+    <!--</p>-->
+    <!--<% if ( phone ) { %>-->
+    <!--<span><strong>Phone</strong>: <%= formatPhoneNumber( phone ) %></span>-->
+    <!--<% } %>-->
+    <!--<% if ( fax ) { %>-->
+    <!--<span><strong>Fax</strong>: <%= fax %></span>-->
+    <!--<% } %>-->
+    <!--<% if ( email ) { %>-->
+    <!--<span><strong>Email</strong>: <%= email %></span>-->
+    <!--<% } %>-->
+    <!--<% if ( hours ) { %>-->
+    <!--<div class="wpsl-store-hours"><strong>Hours</strong>-->
+      <!--<%= hours %>-->
+    <!--</div>-->
+    <!--<% } %>-->
+    <!--<%= createInfoWindowActions( id ) %>-->
+  <!--</div></script>-->
+<!--<script id="wpsl-listing-template" type="text/template">-->
+  <!--<li data-store-id="<%= id %>">-->
+    <!--<div class="wpsl-store-location">-->
+      <!--<p><%= thumb %>-->
+        <!--<% if ( wpslSettings.storeUrl == 1 && url ) { %>-->
+        <!--<strong><a href="<%= url %>"><%= store %></a></strong>-->
+        <!--<% } else { %>-->
+        <!--<strong><%= store %></strong>-->
+        <!--<% } %>-->
+        <!--<span class="wpsl-street"><%= address %></span>-->
+        <!--<% if ( address2 ) { %>-->
+        <!--<span class="wpsl-street"><%= address2 %></span>-->
+        <!--<% } %>-->
+        <!--<span><%= city %> <%= state %> <%= zip %></span>-->
+        <!--<span class="wpsl-country"><%= country %></span>-->
+      <!--</p>-->
+      <!--<p><a class="wpsl-store-details" href="#wpsl-search-wrap">More info</a></p>-->
+    <!--</div>-->
+    <!--<div class="wpsl-direction-wrap">-->
+      <!--<%= distance %> km-->
+      <!--<%= createDirectionUrl() %>-->
+    <!--</div>-->
+  <!--</li>-->
+<!--</script>-->
+<!--<script type="text/javascript">-->
+  <!--function revslider_showDoubleJqueryError(sliderID) {-->
+    <!--var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";-->
+    <!--errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";-->
+    <!--errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";-->
+    <!--errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";-->
+    <!--errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";-->
+    <!--jQuery(sliderID).show().html(errorMessage);-->
+  <!--}-->
+<!--</script>-->
+<!--<link rel="stylesheet" id="vc_tta_style-css" href="./raw_files/js_composer_tta.min.css" type="text/css" media="all">-->
+<!--<script type="text/javascript" src="./raw_files/jquery.easing.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/waypoints.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/waypoints-sticky.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/prettyPhoto.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/isotope.pkgd.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/functions.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/flexslider.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/smoothscroll.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/comment-reply.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/js"></script>-->
+<!--<script type="text/javascript">-->
+  <!--/* <![CDATA[ */-->
+  <!--var ubermenu_data = {-->
+    <!--"remove_conflicts": "on",-->
+    <!--"reposition_on_load": "off",-->
+    <!--"intent_delay": "300",-->
+    <!--"intent_interval": "100",-->
+    <!--"intent_threshold": "7",-->
+    <!--"scrollto_offset": "50",-->
+    <!--"scrollto_duration": "1000",-->
+    <!--"responsive_breakpoint": "959",-->
+    <!--"accessible": "on",-->
+    <!--"retractor_display_strategy": "responsive",-->
+    <!--"touch_off_close": "on",-->
+    <!--"collapse_after_scroll": "on",-->
+    <!--"v": "3.2.5",-->
+    <!--"configurations": ["main"],-->
+    <!--"ajax_url": "https:\/\/www.1stconstitution.com\/wp-admin\/admin-ajax.php",-->
+    <!--"plugin_url": "https:\/\/www.1stconstitution.com\/wp-content\/plugins\/ubermenu\/"-->
+  <!--};-->
+  <!--/* ]]> */-->
+<!--</script>-->
+<!--<script type="text/javascript" src="./raw_files/ubermenu.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/wp-embed.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/js_composer_front.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/vc-accordion.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/vc-tta-autoplay.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/vc-tabs.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/owl.carousel.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/js(1)"></script>-->
+<!--<script type="text/javascript">-->
+  <!--/* <![CDATA[ */-->
+  <!--var wpslLabels = {-->
+    <!--"preloader": "Searching...",-->
+    <!--"noResults": "No results found",-->
+    <!--"moreInfo": "More info",-->
+    <!--"generalError": "Something went wrong, please try again!",-->
+    <!--"queryLimit": "API usage limit reached",-->
+    <!--"directions": "Directions",-->
+    <!--"noDirectionsFound": "No route could be found between the origin and destination",-->
+    <!--"startPoint": "Start location",-->
+    <!--"back": "Back",-->
+    <!--"streetView": "Street view",-->
+    <!--"zoomHere": "Zoom here"-->
+  <!--};-->
+  <!--var wpslGeolocationErrors = {-->
+    <!--"denied": "The application does not have permission to use the Geolocation API.",-->
+    <!--"unavailable": "Location information is unavailable.",-->
+    <!--"timeout": "The geolocation request timed out.",-->
+    <!--"generalError": "An unknown error occurred."-->
+  <!--};-->
+  <!--var wpslSettings = {-->
+    <!--"startMarker": "red@2x.png",-->
+    <!--"markerClusters": "0",-->
+    <!--"streetView": "0",-->
+    <!--"autoComplete": "0",-->
+    <!--"autoLocate": "0",-->
+    <!--"autoLoad": "1",-->
+    <!--"markerEffect": "bounce",-->
+    <!--"markerStreetView": "0",-->
+    <!--"markerZoomTo": "0",-->
+    <!--"newWindow": "0",-->
+    <!--"resetMap": "0",-->
+    <!--"directionRedirect": "1",-->
+    <!--"phoneUrl": "1",-->
+    <!--"moreInfoLocation": "info window",-->
+    <!--"mouseFocus": "0",-->
+    <!--"templateId": "default",-->
+    <!--"maxResults": "25",-->
+    <!--"searchRadius": "50",-->
+    <!--"distanceUnit": "km",-->
+    <!--"geoLocationTimout": "7500",-->
+    <!--"ajaxurl": "https:\/\/www.1stconstitution.com\/wp-admin\/admin-ajax.php",-->
+    <!--"mapControls": "<div id=\"wpsl-map-controls\" ><div class=\"wpsl-icon-direction\"><span>\ue800<\/span><\/div><\/div>",-->
+    <!--"geocodeComponents": {"country": "US"},-->
+    <!--"storeMarker": "blue@2x.png",-->
+    <!--"mapType": "roadmap",-->
+    <!--"mapTypeControl": "0",-->
+    <!--"zoomLevel": "12",-->
+    <!--"startLatlng": "40.3025907,-74.511172",-->
+    <!--"autoZoomLevel": "15",-->
+    <!--"scrollWheel": "0",-->
+    <!--"controlPosition": "left",-->
+    <!--"url": "https:\/\/www.1stconstitution.com\/wp-content\/plugins\/wp-store-locator\/",-->
+    <!--"markerIconProps": {"scaledSize": "24,35", "origin": "0,0", "anchor": "12,35"},-->
+    <!--"storeUrl": "0",-->
+    <!--"maxDropdownHeight": "300",-->
+    <!--"enableStyledDropdowns": "1",-->
+    <!--"mapTabAnchor": "wpsl-map-tab",-->
+    <!--"mapTabAnchorReturn": "",-->
+    <!--"gestureHandling": "auto",-->
+    <!--"directionsTravelMode": "DRIVING",-->
+    <!--"runFitBounds": "1",-->
+    <!--"mapStyle": ""-->
+  <!--};-->
+  <!--/* ]]> */-->
+<!--</script>-->
+<!--<script type="text/javascript" src="./raw_files/wpsl-gmap.min.js"></script>-->
+<!--<script type="text/javascript" src="./raw_files/underscore.min.js"></script>-->
+
+<!--<script type="text/javascript">-->
+  <!--jQuery(document).ready(function ($) {-->
+    <!--"use strict";-->
+
+    <!--/* PrettyPhoto Options */-->
+    <!--var lightboxArgs = {-->
+      <!--animation_speed: 'fast',-->
+      <!--overlay_gallery: false,-->
+      <!--autoplay_slideshow: false,-->
+      <!--slideshow: 5000,-->
+      <!--opacity: 0.8,-->
+      <!--show_title: false,-->
+      <!--social_tools: "", deeplinking: false,-->
+      <!--allow_resize: true,-->
+      <!--allow_expand: false,-->
+      <!--counter_separator_label: '/',-->
+      <!--default_width: 1160,-->
+      <!--default_height: 653-->
+    <!--};-->
+
+    <!--/* Automatic Lightbox */-->
+    <!--$('a[href$=jpg], a[href$=JPG], a[href$=jpeg], a[href$=JPEG], a[href$=png], a[href$=gif], a[href$=bmp]:has(img)').prettyPhoto(lightboxArgs);-->
+
+    <!--/* General Lightbox */-->
+    <!--$('a[class^="prettyPhoto"], a[rel^="prettyPhoto"], .prettyPhoto').prettyPhoto(lightboxArgs);-->
+
+    <!--/* WooCommerce Lightbox */-->
+    <!--$("a[data-rel^='prettyPhoto']").prettyPhoto({-->
+      <!--hook: 'data-rel',-->
+      <!--social_tools: false,-->
+      <!--deeplinking: false,-->
+      <!--overlay_gallery: false,-->
+      <!--opacity: 0.8,-->
+      <!--allow_expand: false, /* Allow the user to expand a resized image. true/false */-->
+      <!--show_title: false-->
+    <!--});-->
+
+
+    <!--/* Transparent Header */-->
+    <!--function transparentHeader() {-->
+      <!--if ($(document).scrollTop() >= 60) {-->
+        <!--$('#header.header-v1').removeClass('header-transparent');-->
+      <!--}-->
+      <!--else {-->
+        <!--$('#header.header-v1.stuck').addClass('header-transparent');-->
+      <!--}-->
+    <!--}-->
+
+    <!--/* Sticky Header */-->
+    <!--if (/Android|BlackBerry|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent) === false) {-->
+
+      <!--var $stickyHeaders = $('#header.header-v1, #header.header-v3 .navigation-wrap, #header.header-v4 .navigation-wrap');-->
+      <!--$stickyHeaders.waypoint('sticky');-->
+
+      <!--$(window).resize(function () {-->
+        <!--$stickyHeaders.waypoint('unsticky');-->
+        <!--if ($(window).width() < 944) {-->
+          <!--$stickyHeaders.waypoint('unsticky');-->
+        <!--}-->
+        <!--else {-->
+          <!--$stickyHeaders.waypoint('sticky');-->
+        <!--}-->
+      <!--});-->
+
+      <!--if ($("body").hasClass("header-is-transparent")) {-->
+        <!--$(document).scroll(function () {-->
+          <!--transparentHeader();-->
+        <!--});-->
+        <!--transparentHeader();-->
+      <!--}-->
+
+    <!--}-->
+
+
+    <!--/* Fill rest of page */-->
+    <!--$('body').css({'background-color': '#acd354'});-->
+
+  <!--});-->
+<!--</script>-->
+
+<!--<script type="text/javascript">-->
+  <!--jQuery(document).ready(function ($) {-->
+    <!--$(".products-nav-btn a").click(function (event) {-->
+      <!--$("#product-navigation").addClass("active");-->
+    <!--});-->
+
+    <!--$(".product-close a").click(function (event) {-->
+      <!--$("#product-navigation").removeClass("active");-->
+    <!--});-->
+
+    <!--$(document).click(function (event) {-->
+      <!--if (!$(event.target).closest("#product-navigation").length && !$(event.target).closest(".products-nav-btn a").length) {-->
+        <!--$("#product-navigation").removeClass("active");-->
+      <!--}-->
+    <!--});-->
+
+
+    <!--$(".uchoose-pop a, a.visa-pop, .leave-site a, a.leave-site").click(function (event) {-->
+      <!--event.preventDefault();-->
+      <!--var alert = confirm("You are about to open a web page that is not part of the official 1st Constitution website. 1st Constitution is not responsible for the content/security of the website you are about to visit.");-->
+      <!--if (alert == true) {-->
+        <!--window.open($(this).attr('href'), '_blank');-->
+      <!--}-->
+    <!--});-->
+
+    <!--$(".home .main-form").css({"opacity": "1"});-->
+  <!--});-->
+<!--</script>-->
+<!--<script type="text/javascript">-->
+  <!--jQuery(document).ready(function ($) {-->
+    <!--var scrollTop = 0;-->
+    <!--$(window).scroll(function () {-->
+      <!--scrollTop = $(this).scrollTop();-->
+      <!--if (scrollTop > 20 && !$("#header").hasClass("active-white")) {-->
+        <!--$("#header").addClass("active-white");-->
+      <!--} else if (scrollTop < 20 && $("#header").hasClass("active-white")) {-->
+        <!--$("#header").removeClass("active-white");-->
+      <!--}-->
+    <!--});-->
+  <!--});-->
+<!--</script>-->
+<!--<script type="text/javascript">-->
+  <!--jQuery(document).ready(function ($) {-->
+    <!--$("a.show-drop-form").click(function (e) {-->
+      <!--e.preventDefault();-->
+      <!--if (!$(this).hasClass("active")) {-->
+        <!--$("a.show-drop-form, .personal-quote-form").addClass("active");-->
+      <!--} else {-->
+        <!--$("a.show-drop-form, .personal-quote-form").removeClass("active");-->
+      <!--}-->
+    <!--});-->
+
+    <!--$("a.mortgage-show").click(function (e) {-->
+      <!--e.preventDefault();-->
+      <!--if (!$(this).hasClass("active")) {-->
+        <!--$("a.mortgage-show, #Mortgagecalculator").addClass("active");-->
+      <!--} else {-->
+        <!--$("a.mortgage-show, #Mortgagecalculator").removeClass("active");-->
+      <!--}-->
+    <!--});-->
+
+    <!--$("a.form-show-btn").click(function (e) {-->
+      <!--e.preventDefault();-->
+      <!--if (!$(this).hasClass("active")) {-->
+        <!--$("a.form-show-btn, .form-show").addClass("active");-->
+      <!--} else {-->
+        <!--$("a.form-show-btn, .form-show").removeClass("active");-->
+      <!--}-->
+    <!--});-->
+
+    <!--$(".sidebar-tab-form ul li a").click(function (e) {-->
+      <!--e.preventDefault();-->
+      <!--if (!$(this).hasClass("active")) {-->
+        <!--$(".sidebar-tab-form ul li a").removeClass("active");-->
+        <!--$(".sidebar-tab-form .sidebar-form-wrap").removeClass("active");-->
+        <!--$(this).addClass("active");-->
+
+        <!--let activeTab = $(this).attr("data-tab");-->
+        <!--$(".sidebar-form-wrap[data-form=" + activeTab + "]").addClass("active");-->
+      <!--}-->
+    <!--});-->
+  <!--});-->
+<!--</script>-->
+<!--<script>-->
+  <!--jQuery(document).ready(function ($) {-->
+  <!--$("img:not([title])").each(function () {-->
+  <!--if ($(this).attr("alt") != '') $(this).parent().attr("title", $(this).attr("alt"))-->
+      <!--else $(this).parent().attr("title", $(this).attr("src"));-->
+    <!--});-->
+  <!--});-->
+<!--</script>-->
+
+
+<!--<script id="wappalyzer" src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js"></script>-->
+<!--<div style="position: absolute; z-index: -10000; top: 0px; left: 0px; right: 0px; height: 4146px;"></div>-->
+<!--<div style="clear: both;"></div>-->

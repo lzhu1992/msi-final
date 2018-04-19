@@ -1,0 +1,45 @@
+
+<div fxLayout="column" fxLayoutGap="30px" style="margin: 100px 200px;">
+  <mat-card fxLayout="column">
+    <h1>Log in</h1>
+    <form  [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()" fxLayout="column" #loginForm="ngForm" (input)="updateErr()">
+      <div class="form-group">
+        <label class="form__label large--one-quarter" for="username">Username</label>
+        <div class="form__control large--one-quarter medium--one-half">
+          <input matInput id="username" name = "username"  type="text" required="" data-mask="none"  aria-describedby="usernametext" formControlName="email">
+        </div>
+        <mat-error *ngIf="(loginForm.submitted || loginFormGroup.get('email').touched) && loginFormGroup.get('email').invalid">
+          username can't be empty!
+        </mat-error>
+
+      </div>
+      <div class="form__group">
+        <label class="form__label large--one-quarter" for="password">Password</label>
+        <div class="form__control large--one-quarter medium--one-half">
+          <input matInput id="password" name="password" type="password" required="" data-mask="none"  aria-describedby="passwordtext" formControlName="password">
+        </div>
+        <mat-error *ngIf="(loginForm.submitted || loginFormGroup.get('password').touched) && loginFormGroup.get('password').invalid">
+          password can't be empty!
+        </mat-error>
+        <mat-error *ngIf="loginForm.submitted && err">
+          Your email and password does not match records.
+        </mat-error>
+      </div>
+      <div>
+
+        <button type="submit" class = btn-navbar style="margin: 10px 1px">Login</button>
+
+      </div>
+      <a class="btn btn--link" href="https://web13.secureinternetbank.com/PBI_PBI1151/ForgotPassword/026013408" style="margin: 10px 1px">Forgot password?</a>
+
+
+      <div class="form__group">
+        <div class="push--large--one-quarter large--one-quarter medium--one-half">
+          <p class="push--up">Not yet enrolled? <a href="/register">Enroll now</a>.</p>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+</div>
+
+

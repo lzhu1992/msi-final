@@ -1,0 +1,127 @@
+<div class="vc_col-sm-4 main-form wpb_column column_container col custom-padding color-dark"
+     style="padding: 0px; opacity: 1;" data-animation="" data-delay="">
+  <div class="wpb_wrapper">
+    <div class="vc_tta-container" data-vc-action="collapse">
+      <div
+        class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left">
+        <div class="vc_tta-tabs-container">
+          <ul class="vc_tta-tabs-list">
+            <li class="vc_tta-tab vc_active" data-vc-tab="">
+              <a href="https://www.1stconstitution.com/#online-banking" data-vc-tabs="" data-vc-container=".vc_tta"><span class="vc_tta-title-text">Online Banking</span></a>
+            </li>
+            <li class="vc_tta-tab" data-vc-tab="">
+              <a href="https://www.1stconstitution.com/#cash-manager" data-vc-tabs="" data-vc-container=".vc_tta"><span class="vc_tta-title-text">Cash Manager</span></a>
+            </li>
+            <li class="vc_tta-tab" data-vc-tab="">
+              <a href="https://www.1stconstitution.com/#open-account" data-vc-tabs="" data-vc-container=".vc_tta"><span class="vc_tta-title-text">Open Account</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="vc_tta-panels-container">
+          <div class="vc_tta-panels">
+            <div class="vc_tta-panel vc_active" id="online-banking" data-vc-content=".vc_tta-panel-body">
+              <div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a
+                href="https://www.1stconstitution.com/#online-banking" data-vc-accordion=""
+                data-vc-container=".vc_tta-container"><span
+                class="vc_tta-title-text">Online Banking</span></a></h4></div>
+              <div class="vc_tta-panel-body">
+                <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1496236185965">
+                  <div class="wpb_wrapper">
+                    <div class="hero-form-wrapper"  style="padding-top:15px">
+                      <h3>Online Banking</h3>
+                      <form  [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()" #loginForm="ngForm" (input)="updateErr()" id="mainForm" method="post"
+                            action="https://web13.secureinternetbank.com/pbi_pbi1151/login/remote/021207154">
+                        <!---->
+
+
+
+
+                              <!--<div class="form__group">-->
+                                <!--<label class="form__label large&#45;&#45;one-quarter" for="username">Username</label>-->
+                                <!--<div class="form__control large&#45;&#45;one-quarter medium&#45;&#45;one-half">-->
+                                  <!--<input matInput id="username" name = "username"  type="text" required="" data-mask="none"  aria-describedby="usernametext" formControlName="email">-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash;<mat-error *ngIf="(loginForm.submitted || loginFormGroup.get('email').touched) && loginFormGroup.get('email').invalid">&ndash;&gt;-->
+                                <!--&lt;!&ndash;username can't be empty!&ndash;&gt;-->
+                                <!--&lt;!&ndash;</mat-error>&ndash;&gt;-->
+
+                              <!--</div>-->
+                              <!--<div class="form__group">-->
+                                <!--<label class="form__label large&#45;&#45;one-quarter" for="password">Password</label>-->
+                                <!--<div class="form__control large&#45;&#45;one-quarter medium&#45;&#45;one-half">-->
+                                  <!--<input matInput id="password" name="password" type="password" required="" data-mask="none"  aria-describedby="passwordtext" formControlName="password">-->
+                                <!--</div>-->
+                      <!---->
+
+                        <!---->
+                        <!--<div formGroupName="login" >-->
+                        <input class="form-control" type="text" formControlName="email" id="name" placeholder="UserName">
+                        <mat-error *ngIf="(loginForm.submitted || loginFormGroup.get('email').touched) && loginFormGroup.get('email').invalid">
+                          username can't be empty!
+                        </mat-error>
+                        <input type="password" formControlName="password" id="pwd" placeholder="Password">
+                        <button class="btn-fluid margin-0-b " tabindex="0"  type="submit"  name="Login"><span class="btn-content">Log In</span></button>
+                      </form>
+                      <!--<p>{{loginFormGroup.value | json }}</p>-->
+                      <!--<p>{{user}}</p>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="newdivider align-center"
+                     style="border-bottom-style: solid; border-color: #dddddd; border-bottom-width: 1px; margin-top: 0px; margin-bottom: 10px; width: 96%; "></div>
+                <div class="clear"></div>
+                <a routerLink="/register" target="_blank"
+                   class="button custom full " style="background-color: #20afe3; border-color: #20afe3;border-radius: 4px;">
+                  First Time User? Enroll Today!</a>
+              <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                <div class="wpb_wrapper">
+                  <p style="margin-top:5px;font-size:13px;text-align:center"><strong><a
+                    href="https://web13.secureinternetbank.com/pbi_pbi1151/ForgotPassword/021207154"> Forgot Password?</a></strong></p>
+                  <p style="font-size: 13px;margin-top: 5px;text-align: center;">For technical support, contact us at (609) 578-4420.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vc_tta-panel" id="cash-manager" data-vc-content=".vc_tta-panel-body">
+            <div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a
+              href="https://www.1stconstitution.com/#cash-manager" data-vc-accordion=""
+              data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Cash Manager</span></a>
+            </h4></div>
+            <div class="vc_tta-panel-body">
+              <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1515680449339">
+                <div class="wpb_wrapper">
+                  <div class="hero-form-wrapper" style="padding-top:15px">
+                    <a
+                      href="https://www.1stconstitution.com/wp-content/uploads/2018/01/EZ-Deposit-User-Notification-of-Disabling-Transport-Layer-Security.pdf"
+                      target="_blank"><b>Important Notice to EZDeposit Users-Effective 1/24/18</b></a>
+                    <h3>Cash Manager</h3>
+                    <form id="mainForm1" method="POST"
+                          action="https://web13.secureinternetbank.com/EBC_EBC1961/EBC1961.ashx?WCI=Process&amp;WCE=RemoteLogon&amp;RT=021207154&amp;IRL=T&amp;mfa=2">
+                      <input type="hidden" id="nmRTN" name="nmRTN" value="021207154">
+                      <input type="text" name="nmUID" placeholder="Access ID">
+                      <input type="submit"  value="Login">
+                    </form>
+                  </div>
+                  <p style="font-size: 13px;margin-top: 5px;text-align: center;">For technical support,
+                    contact us at (609) 578-4420.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vc_tta-panel" id="open-account" data-vc-content=".vc_tta-panel-body">
+            <div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a
+              href="https://www.1stconstitution.com/#open-account" data-vc-accordion=""
+              data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Open Account</span></a>
+            </h4></div>
+            <div class="vc_tta-panel-body"><a
+              href="https://accountcreate.fiservapps.com/app/AC_4130/App.aspx?AppID=11001" target="_blank"
+              class="button custom full "
+              style="background-color: #20afe3; border-color: #20afe3;border-radius: 4px;">Open an
+              Account</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

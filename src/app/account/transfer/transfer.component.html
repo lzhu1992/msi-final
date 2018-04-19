@@ -1,0 +1,87 @@
+<div fxLayout="column" fxLayoutGap="30px" style="margin:100px 200px;">
+  <mat-card fxLayout="column">
+    <main id="main">
+      <div class="grid">
+        <div class="grid__unit one-whole">
+          <h1>Transfer Money</h1>
+          <div id="enrollIndex" class="padding--add content--block">
+
+            <form [formGroup]="TransactionFormGroup" (ngSubmit)="onSubmit()" class="form--horizontal padding--add" #TransactionForm="ngForm">
+              <!--<div class="slat push--down">
+                <pre class="helptext push--large--one-quarter large--three-quarters" id="helpTextEnrollmentForm">Welcome to First American International Bank ("FAIB") Online Banking. FAIB Online Banking will give you the power and convenience to perform most of your banking activities from the comfort of your home or office, any time of the day or night. To get online banking access you will need to fill out the required information below and click enroll.  You will also be asked to enter a New Access ID and Password. These will be used for all future access.</pre>
+              </div>-->
+
+
+              <div class="form__group required">
+                <label class="form__label large--one-quarter" for="recipient">*recipient</label>
+                <div class="form__control large--one-quarter medium--one-half">
+                  <input id="recipient" formControlName="recipient" type="text" maxlength="17" required="" aria-required="true" >
+                  <!-- <button type="button" role="button" aria-label="Show account number" tabindex="-1"  aria-pressed="true" style="position: absolute; right: 0px; top: 50%; margin-top: -11.5px;">Hide</button>-->
+                </div>
+                <!--<mat-error *ngIf="(TransactionForm.submitted || TransactionFormGroup.get('recipient').touched) && TransactionFormGroup.get('recipient').invalid">-->
+                  <!--recipient can't be empty!-->
+                <!--</mat-error>-->
+
+                <p id="account-number-text" class="text--error text--error-form push--large--one-quarter large--three-quarters is-hidden" data-bind="css: {&#39;is--hidden&#39;: false}, visible: accountNumberError(), text: accountNumberError" style="display: none;"></p>
+              </div>
+              <div class="form__group required">
+                <label class="form__label large--one-quarter" for="amount">*Amount</label>
+                <div class="form__control large--one-quarter medium--one-half">
+                  <input id="amount" formControlName="amount"  type="text" maxlength="11" autocomplete="off" required="" aria-required="true"  aria-describedby="ssntext">
+                </div>
+                <!--<mat-error *ngIf="(TransactionForm.submitted || TransactionFormGroup.get('amount').touched) && TransactionFormGroup.get('amount').invalid">-->
+                  <!--amount can't be empty!-->
+                <!--</mat-error>-->
+                <p id="ssntext" class="text--error text--error-form push--large--one-quarter large--three-quarters" data-bind="css: {&#39;is--hidden&#39;: false}, visible: ssnError(), text: ssnError" style="display: none;"></p>
+              </div>
+
+              <div class="form__group required">
+                <label class="form__label large--one-quarter" for="memo">Memo</label>
+                <div class="form__control large--one-quarter medium--one-half">
+                  <input id="memo"  type="email" maxlength="128"  required="" aria-required="true" autocomplete="off">
+                </div>
+                <p id="password-text" class="text--error text--error-form push--large--one-quarter large--three-quarters" data-bind="css: {&#39;is--hidden&#39;: false}, visible: emailAddressError(), text: emailAddressError" style="display: none;"></p>
+              </div>
+              <!--
+              <div class="form__group required">
+                <label class="form__label large--one-quarter" for="confirmEmailAddress">Confirm email address</label>
+                <div class="form__control large--one-quarter medium--one-half">
+                  <input id="confirmEmailAddress" type="email" name="confirmEmailAddress" required="" aria-required="true" data-bind="value: confirmEmailAddress" autocomplete="off">
+                </div>
+                <p id="email-address-confirm-text" class="text--error text--error-form push--large--one-quarter large--three-quarters" data-bind="css: {&#39;is--hidden&#39;: false}, visible: confirmEmailAddressError(), text: confirmEmailAddressError" style="display: none;"></p>
+              </div>
+              <div class="form__group required">
+                <label class="form__label large--one-quarter" for="email">Password</label>
+                <div class="form__control large--one-quarter medium--one-half">
+                  <input id="password" formControlName="password" type="text" maxlength="128"  required="" aria-required="true"  autocomplete="off">
+                </div>
+                <mat-error *ngIf="(TransactionForm.submitted || TransactionFormGroup.get('password').touched) && TransactionFormGroup.get('password').invalid">
+                  password can't be empty!
+                </mat-error>
+                <p id="email-address-text" class="text--error text--error-form push--large--one-quarter large--three-quarters" data-bind="css: {&#39;is--hidden&#39;: false}, visible: emailAddressError(), text: emailAddressError" style="display: none;"></p>
+              </div>
+              -->
+              <div class="form__group">
+                <div class="large--three-quarters push--large--one-quarter"><span class="req-indicator">*</span> Indicates required field</div>
+              </div>
+              <div class="form__group">
+                <div class="push--large--one-quarter large--one-quarter medium--one-half">
+                  <button type="submit" class="btn btn--primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon shape--loader" viewBox="0 0 16 16" data-bind="visible: processing()" style="display: none;">
+                      <title>Processing</title>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape--loader"></use>
+                    </svg>
+                    Transfer
+                  </button>
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </mat-card>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,122 @@
+<div fxLayout="column" fxLayoutGap="30px" style="margin:100px 200px;">
+<!--<p>register works</p>-->
+<mat-card fxLayout="column">
+<div class="wrapper">
+  <header role="banner">
+
+  </header>
+  <main id="main">
+    <div class="grid">
+      <div class="grid__unit one-whole">
+        <h1>Enroll</h1>
+        <div id="enrollIndex" class="padding--add content--block">
+          <p class="alert alert--error" data-bind="css: {'is--hidden': false}, visible: error()" style="display: none;">
+            <svg viewBox="0 0 16 16" class="icon shape--exclamation-circle"><title>Error</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape--exclamation-circle"></use></svg> <span data-bind="text: error()"></span>
+          </p>
+          <form class="form--horizontal padding--add" [formGroup]="registerFormGroup"   (ngSubmit)="onSubmit()" autocomplete="off" #registerForm="ngForm">
+            <div class="form__group required">
+              <label class="form__label large--one-quarter" for="accountType">Type of account</label>
+              <div class="form__control large--one-quarter medium--one-half">
+                <select id="accountType" formControlName="type"  name="accountType" data-bind="value: accountType" autocomplete="off" autofocus="">
+                  <option value="Checking">Checking</option>
+                  <option value="Savings">Savings</option>
+                  <option value="Certificate of Deposit">Certificate of Deposit</option>
+                  <option value="Loan">Loan</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__group required">
+              <label class="form__label large--one-quarter" for="accountNumber">Account number</label>
+              <div class="form__control large--one-quarter medium--one-half">
+                <div class="hideShowPassword-wrapper" style="position: relative; width: 100%; display: inline-block; vertical-align: baseline; margin: 0px;">
+                  <input id="accountNumber" formControlName="account" name="accountNumber" type="text" maxlength="17" autocomplete="off" required="" aria-required="true" data-bind="value: accountNumber" class="hideShowPassword-field" style="margin: 0px; padding-right: 40px;">
+                  <!--<button type="button" role="button" aria-label="Show account number" tabindex="-1" class="hideShowPassword-toggle hideShowPassword-toggle-hide" aria-pressed="true" style="position: absolute; right: 0px; top: 50%; margin-top: -11.5px;">Hide</button></div>-->
+                </div>
+              </div>
+              <p id="account-number-text" class="text--error text--error-form push--large--one-quarter large--three-quarters is-hidden" data-bind="css: {'is--hidden': false}, visible: accountNumberError(), text: accountNumberError" style="display: none;"></p>
+            </div>
+            <mat-error *ngIf="(registerForm.submitted || registerFormGroup.get('account').touched) && registerFormGroup.get('account').invalid">
+              account can't be empty!
+            </mat-error>
+
+            <div class="form__group required">
+              <label class="form__label large--one-quarter" for="ssn">Social Security number</label>
+              <div class="form__control large--one-quarter medium--one-half">
+                <div class="hideShowPassword-wrapper" style="position: relative; width: 100%; display: inline-block; vertical-align: baseline; margin: 0px;">
+                  <input id="ssn" name="ssn" formControlName="ssn"  type="text" maxlength="11" autocomplete="off" required="" aria-required="true" data-bind="value: ssn" aria-describedby="ssntext" class="hideShowPassword-field" style="margin: 0px; padding-right: 40px;">
+                <!--<button type="button" role="button" aria-label="Show social security number" tabindex="-1" class="hideShowPassword-toggle hideShowPassword-toggle-hide" aria-pressed="true" style="position: absolute; right: 0px; top: 50%; margin-top: -11.5px;">Hide</button>-->
+                </div>
+              </div>
+              <p id="ssntext" class="text--error text--error-form push--large--one-quarter large--three-quarters" data-bind="css: {'is--hidden': false}, visible: ssnError(), text: ssnError" style="display: none;"></p>
+            </div>
+            <mat-error *ngIf="(registerForm.submitted || registerFormGroup.get('ssn').touched) && registerFormGroup.get('ssn').invalid">
+              ssn can't be empty!
+            </mat-error>
+            <div class="form__group required">
+              <label class="form__label large--one-quarter" for="PIN">PIN</label>
+              <div class="form__control large--one-quarter medium--one-half">
+                <input id="PIN" name="PIN" formControlName="password" type="text" maxlength="6" autocomplete="off" required="" aria-required="true" data-bind="value: pin" aria-describedby="pintext">
+              </div>
+              <p id="pintext" class="text--error text--error-form push--large--one-quarter large--three-quarters" data-bind="css: {'is--hidden': false}, visible: pinError(), text: pinError" style="display: none;"></p>
+            </div>
+            <mat-error *ngIf="(registerForm.submitted || registerFormGroup.get('password').touched) && registerFormGroup.get('password').invalid">
+              password can't be empty!
+            </mat-error>
+            <div class="form__group required">
+              <label class="form__label large--one-quarter" for="emailAddress">Email address</label>
+              <div class="form__control large--one-quarter medium--one-half">
+                <input id="emailAddress" formControlName="email" type="email" maxlength="128" name="emailAddress" required="" aria-required="true" data-bind="value: emailAddress" autocomplete="off">
+              </div>
+              <p id="email-address-text" class="text--error text--error-form push--large--one-quarter large--three-quarters" data-bind="css: {'is--hidden': false}, visible: emailAddressError(), text: emailAddressError" style="display: none;"></p>
+            </div>
+            <mat-error *ngIf="(registerForm.submitted || registerFormGroup.get('email').touched) && registerFormGroup.get('email').invalid">
+              email can't be empty!
+            </mat-error>
+            <div class="form__group required">
+              <label class="form__label large--one-quarter" for="confirmEmailAddress">Confirm email address</label>
+              <div class="form__control large--one-quarter medium--one-half">
+                <input id="confirmEmailAddress" type="email" name="confirmEmailAddress" required="" aria-required="true" data-bind="value: confirmEmailAddress" autocomplete="off">
+              </div>
+              <p id="email-address-confirm-text" class="text--error text--error-form push--large--one-quarter large--three-quarters" data-bind="css: {'is--hidden': false}, visible: confirmEmailAddressError(), text: confirmEmailAddressError" style="display: none;"></p>
+            </div>
+            <div class="form__group">
+              <div class="large--three-quarters push--large--one-quarter"><span class="req-indicator">*</span> Indicates required field</div>
+            </div>
+            <div class="form__group">
+              <div class="push--large--one-quarter large--one-quarter medium--one-half">
+                <button type="submit" class="btn btn--primary" data-bind="enable: !processing()">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon shape--loader" viewBox="0 0 16 16" data-bind="visible: processing()" style="display: none;">
+                    <title>Processing</title>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape--loader"></use>
+                  </svg>
+                  Enroll
+                </button>
+                <p class="push--up">Already enrolled? <a href="/PBI_PBI1151/Login/021207154">Login now</a>.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page--footer" role="contentinfo">
+    <nav role="navigation" class="no-print nav--footer">
+      <ul class="nav nav--menu">
+        <li><a class="navitem" target="_blank" href="/PBI_PBI1151/Help/whstart.htm">Help</a></li>
+
+        <li><a class="navitem" href="http://www.1stconstitution.com/cmsAdmin/uploads/Privacy-Policy_001.pdf" target="_blank">Privacy Policy</a></li>              <li><a class="navitem" href="http://www.1stconstitution.com/cmsAdmin/uploads/online-banking-agreement.pdf" target="_blank">Online Banking Agreement</a></li>              <li><a class="navitem" href="http://www.1stconstitution.com/about/contact.php" target="_blank">Contact Us</a></li>              <li><a class="navitem" href="http://www.1stconstitution.com/locations/" target="_blank">Locations</a></li>                                                                                 </ul>
+    </nav>
+
+    <div id="footerText" class="cf">
+      <p class="float--left padding-left--add">
+        Member FDIC.
+
+        Equal Housing Lender <svg viewBox="0 0 16 16" class="icon shape--ehl"><title>Equal Housing Lender</title><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape--ehl"></use></svg>.
+      </p>
+      <p class="float--right padding-right--add">©&nbsp;2015-2018 Fiserv, Inc. or its affiliates.</p>
+    </div>
+  </footer>
+</div>
+</mat-card>
+</div>

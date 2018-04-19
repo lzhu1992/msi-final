@@ -1,0 +1,50 @@
+<div fxLayout="column" fxLayoutGap="10px" style="margin:100px 200px;">
+  <mat-card fxLayout="column">
+
+    <h1> Good Afternoon {{name}}</h1>
+
+  </mat-card>
+</div>
+<div fxLayout="column" fxLayoutGap="10px" style="margin:100px 200px;">
+  <mat-card fxLayout="column">
+<!--<mat-divider [inset]="true" *ngIf="!last"></mat-divider>-->
+<div fxLayout="column" fxLayoutGap="30px" style="margin: 0px 30px;">
+  <h2>Recent Activity </h2>
+  <!--<a type="button" class="btn default"-->
+     <!--href={{ this.PDF_LINK }} target="_blank">Download All Transactions as PDF</a>-->
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="tdate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Date</mat-header-cell>
+      <mat-cell *matCellDef="let transaction"> {{transaction.tdate}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="recipient">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Recipient</mat-header-cell>
+      <mat-cell *matCellDef="let transaction"> {{transaction.recipient}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Amount</mat-header-cell>
+      <mat-cell *matCellDef="let transaction"> {{transaction.amount}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="deposit">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Deposit</mat-header-cell>
+      <mat-cell *matCellDef="let transaction">{{transaction.deposit}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="describe">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Describe</mat-header-cell>
+      <mat-cell *matCellDef="let transaction">{{transaction.describe}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+    </div>
+  </mat-card>
+</div>
+<div id="chart">
+
+</div>
